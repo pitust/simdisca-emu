@@ -12,10 +12,10 @@ start:
 
 interrupt_table:
     times 31 dd 0
-    dw interface_interrupt_handler
+    dd interface_interrupt_handler
 
 interface_interrupt_handler:
-    mv mrp, d [prb]    
+    mv mrp, d prb
 
 
 
